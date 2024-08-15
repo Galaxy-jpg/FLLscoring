@@ -268,6 +268,153 @@
       M08_1 = Number(M08_1);
       return M08_1 * 10;
     }]
+  },
+  {
+    "title": "M09 UNEXPECTED ENCOUNTER",
+    "description": "N/A",
+    "objectives": [{
+      "id": "M09_1",
+      "title": "The unknown creature is released.",
+      "type": "yesno",
+      "default": "no"
+    },
+    {
+      "id": "M09_2",
+      "title": "The unknown creature is at least partly in the cold seep.".
+      "type": "yesno",
+      "default": "no"
+    }],
+    "score": [function(M09_1, M09_2) {
+        M09_1 = String(M09_1);
+        M09_2 = String(M09_2);
+        if (M09_1 === 'yes') {
+          if (M09_2 === 'yes') {
+            return 30;
+          }
+          if (M09_2 === 'no') {
+            return 20;
+          }
+        }
+        if (M09_1 === 'no') {
+          if (M09_2 === 'yes') {
+            return 10;
+          }
+          if (M09_2 === 'no') {
+            return 0;
+          }
+        }
+      }]
+  },
+  {
+    "title": "M10 SEND OVER THE SUBMERSIBLE",
+    "description": "N/A",
+    "objectives": [{
+      "id": "M10_1",
+      "title": "Your team's yellow flag is down.",
+      "type": "yesno",
+      "default": "no"
+    },
+    {
+      "id": "M10_2",
+      "title": "The submersible is clearly closer to the opposing field.",
+      "type": "yesno",
+      "default": "no"
+    }],
+    "score": [function(M10_1, M10_2) {
+      M10_1 = String(M10_1);
+      M10_2 = String(M10_2);
+      if (M10_1 === 'yes') {
+        if (M10_2 === 'yes') {
+          return 40;
+        }
+        if (M10_2 === 'no') {
+          return 30;
+        }
+      }
+      if (M10_1 === 'no') {
+        if (M10_2 === 'yes') {
+          return 10;
+        }
+        if (M10_2 === 'no') {
+          return 0;
+        }
+      }
+    }]
+  },
+  {
+    "title": "M11 SONAR DISCOVERY",
+    "description": "N/A",
+    "objectives": [{
+      "id": "M11_1",
+      "title": "Number of whales revealed.",
+      "options": [
+        {
+          "value": "0",
+          "title": "0"
+        },
+        {
+          "value": "1",
+          "title": "1"
+        },
+        {
+          "value": "2",
+          "title": "2"
+        }
+      ],
+      "type": "enum",
+      "default": "0"
+    }],
+    "score": [function(M11_1) {
+      M11_1 = String(M11_1);
+      switch (M11_1) {
+        case "0":
+          return 0;
+        case "1":
+          return 20;
+        case "2":
+          return 30;
+      }
+    }]
+  },
+  {
+    "title": "M12 FEED THE WHALE",
+    "description": "N/A",
+    "objectives": [{
+      "id": "M12_1",
+      "title": "Number of krill at least partly in the whale's mouth.",
+      "options": [
+        {
+          "value": "0",
+          "title": "0"
+        },
+        {
+          "value": "1",
+          "title": "1"
+        },
+        {
+          "value": "2",
+          "title": "2"
+        },
+        {
+          "value": "3",
+          "title": "3"
+        },
+        {
+          "value": "4",
+          "title": "4"
+        },
+        {
+          "value": "5",
+          "title": "5",
+        }
+      ],
+      "type": "enum",
+      "default": "0"
+    }],
+    "score": [function(M12_1) {
+      M12_1 = Number(M12_1);
+      return M12_1 * 10;
+    }]
   }
   }],
   "strings": {
