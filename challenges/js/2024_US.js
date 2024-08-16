@@ -415,6 +415,187 @@
       M12_1 = Number(M12_1);
       return M12_1 * 10;
     }]
+  },
+  {
+    "title": "M13 CHANGING SHIPPING LANES",
+    "description": "N/A",
+    "objectives": [{
+      "id": "M13_1",
+      "title": "The ship is in the new shipping lane, touching the mat.",
+      "type": "yesno",
+      "default": "no"
+    }],
+    "score": [function(M12_1) {
+      M12_1 = String(M12_1);
+      if (M12_1 === 'yes') {
+        return 20;
+      }
+      if (M12_1 === 'no') {
+        return 0;
+      }
+    }]
+  },
+  {
+    "title": "M14 SAMPLE VESSEL",
+    "description": "N/A",
+    "objectives": [{
+      "id": "M14_1",
+      "title": "The water sample is completely outside the water sample area.",
+      "type": "yesno",
+      "default": "no"
+    },
+    {
+      "id": "M14_2",
+      "title": "The seabed sample is no longer touching the seabed.",
+      "type": "yesno",
+      "default": "no"
+    },
+    {
+      "id": "M14_3",
+      "title": "The plankton sample is no longer touching the kelp forest.",
+      "type": "yesno",
+      "default": "no"
+    },
+    {
+      "id": "M14_4",
+      "title": "Number of trident pieces no longer touching the shipwreck.",
+      "options": [
+        {
+          "value": "0",
+          "title": "0"
+        },
+        {
+          "value": "1",
+          "title": "1"
+        },
+        {
+          "value": "2",
+          "title": "2"
+        }
+      ],
+      "type": "enum",
+      "default": "0"
+    }],
+    "score": [function(M14_1, M14_2, M14_3, M14_4) {
+      M14_1 = String(M14_1);
+      M14_2 = String(M14_2);
+      M14_3 = String(M14_3);
+      M14_4 = Number(M14_4);
+      if (M14_1 === 'yes' && M14_2 === 'yes' && M14_3 === 'yes') {
+        switch (M14_4) {
+          case 0:
+            return 25;
+          case 1;
+            return 45;
+          case 2:
+            return 55;
+        }
+      }
+      if (M14_1 === 'yes' && M14_2 === 'yes' && M14_3 === 'no' || M14_1 === 'yes' && M14_2 === 'no' && M14_3 === 'yes') {
+        switch (M14_4) {
+          case 0:
+            return 15;
+          case 1:
+            return 35;
+          case 2:
+            return 45;
+        }
+      }
+      if (M14_1 === 'yes' && M14_2 === 'no' && M14_3 === 'no') {
+        switch (M14_4) {
+          case 0:
+            return 5;
+          case 1:
+            return 25;
+          case 2:
+            return 35;
+        }
+      }
+      if (M14_1 === 'no' && M14_2 === 'yes' && M14_3 === 'yes') {
+        switch (M14_4) {
+          case 0:
+            return 20;
+          case 1:
+            return 40;
+          case 2:
+            return 50;
+        }
+      }
+      if (M14_1 === 'no' && M14_2 === 'yes' && M14_3 === 'no' || M14_1 === 'no' && M14_2 === 'no' && M14_3 === 'yes') {
+        switch (M14_4) {
+          case 0:
+            return 10;
+          case 1:
+            return 30;
+          case 2:
+            return 40;
+        }
+      }
+      if (M14_1 === 'no' && M14_2 === 'no' && M14_3 === 'no') {
+        switch (M14_4) {
+          case 0:
+            return 0;
+          case 1:
+            return 20;
+          case 2:
+            return 30;
+        }
+      }
+    }]
+  },
+  {
+    "id": "M15 RESEARCH VESSEL",
+    "description": "N/A",
+    "options": [{
+      "id": "M15_1",
+      "title": "Number of samples, trident part(s), or treasure chest at least partly in the research vessel's cargo area.",
+      "options": [{
+        "title": "0",
+        "value": "0"
+      },
+      {
+        "title": "1",
+        "value": "1"
+      },
+      {
+        "title": "2",
+        "value": "2"
+      },
+      {
+        "title": "3",
+        "value": "3"
+      },
+      {
+        "title": "4",
+        "value": "4"
+      },
+      {
+        "title": "5",
+        "value": "5"
+      },
+      {
+        "title": "6",
+        "value": "6"
+      }],
+      "type": "enum",
+      "default": "0"
+    },
+    {
+      "id": "M15_2",
+      "title": "The ports latch is at least partly in the research vessel's loop.",
+      "type": "yesno",
+      "default", "no"
+    }],
+    "score": [function (M15_1, M15_2) {
+      M15_1 = Number(M15_1);
+      M15_2 = String(M15_2);
+      if (M15_2 === 'yes') {
+        return M15_1 * 5 + 20;
+      }
+      if (M15_3 === 'no') {
+        return M15_1 * 5;
+      }
+    }]
   }
   }],
   "strings": {
