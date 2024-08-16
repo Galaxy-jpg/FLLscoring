@@ -596,6 +596,90 @@
         return M15_1 * 5;
       }
     }]
+  },
+  {
+    "id": "PRECISION TOKENS",
+    "description": "N/A",
+    "options": [{
+      "id": "PT",
+      "title": "Number of precision tokens remaining.".
+      "options": [
+        {
+          "title": "0",
+          "value": "0"
+        },
+        {
+          "title": "1",
+          "value": "1"
+        },
+        {
+          "title": "2",
+          "value": "2"
+        },
+        {
+          "title": "3",
+          "value": "3"
+        },
+        {
+          "title": "4",
+          "value": "4"
+        },
+        {
+          "title": "5",
+          "value": "5"
+        },
+        {
+          "title": "6",
+          "value": "6"
+        }
+      ],
+      "type": "enum",
+      "default": "6"
+    }],
+    "score": [function(PT) {
+      PT = Number(PT) {
+        case 0:
+          return 0;
+        case 1:
+          return 10;
+        case 2:
+          return 15;
+        case 3:
+          return 25;
+        case 4:
+          return 35;
+        case 5:
+          return 50;
+        case 6:
+          return 50;
+      }
+    }]
+  },
+  {
+    "id": "GRACIOUS PROFESSIONALISM",
+    "description": "N/A",
+    "options": [{
+      "id": "GP",
+      "title": "Gracious Professionalism displayed at the robot game table.".
+      "options": [
+      {
+        "title": "DEVELOPING 2",
+        "value": "2"
+      },
+      {
+        "title": "ACCOMPLISHED 3",
+        "value": "3"
+      },
+      {
+        "title": "EXCEEDS 4",
+        "value": "4"
+      }],
+      "type": "enum",
+      "default": "3",
+    }],
+    "score": [function(GP) {
+        return 0;
+    }]
   }
   }],
   "strings": {
