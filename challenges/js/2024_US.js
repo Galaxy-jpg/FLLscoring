@@ -6,9 +6,8 @@
     "objectives": [{
       "id": "EI",
       "title": "The robot and all equipment fit completely in one launch area and under the height limit",
-      "type": "yesno"
+      "type": "yesno",
       "default": "no"
-      "
     }],
     "score": [function(EI) {
       EI = String(EI);
@@ -40,8 +39,7 @@
       "title": "The coral buds are flipped up.",
       "type": "yesno",
       "default": "no"
-    } 
-    ],
+    }],
     "score": [function(M01_1, M01_2, M01_3) {
         M01_1 = String(M01_1);
         M01_2 = String(M01_2);
@@ -125,7 +123,7 @@
           },
           {
             "value": "2",
-            "title": "2",
+            "title": "2"
           },
           {
             "value": "3",
@@ -142,7 +140,7 @@
         if (M03_1 === 'yes') {
           return M03_2 * 5 + 20;
         }
-        if (M03_2 === 'no') {
+        if (M03_1 === 'no') {
           return M03_2 * 5;
         }
       }]
@@ -158,7 +156,7 @@
     },
     {
       "id": "M04_2",
-      "title": "The scuba diver is hanging on the coral reef support.".
+      "title": "The scuba diver is hanging on the coral reef support.",
       "type": "yesno",
       "default": "no"
     }],
@@ -258,7 +256,7 @@
         },
         {
           "value": "4",
-          "title": "4",
+          "title": "4"
         }
       ],
       "type": "enum",
@@ -280,7 +278,7 @@
     },
     {
       "id": "M09_2",
-      "title": "The unknown creature is at least partly in the cold seep.".
+      "title": "The unknown creature is at least partly in the cold seep.",
       "type": "yesno",
       "default": "no"
     }],
@@ -367,11 +365,11 @@
     "score": [function(M11_1) {
       M11_1 = String(M11_1);
       switch (M11_1) {
-        case "0":
+        case '0':
           return 0;
-        case "1":
+        case '1':
           return 20;
-        case "2":
+        case '2':
           return 30;
       }
     }]
@@ -405,7 +403,7 @@
         },
         {
           "value": "5",
-          "title": "5",
+          "title": "5"
         }
       ],
       "type": "enum",
@@ -584,7 +582,7 @@
       "id": "M15_2",
       "title": "The ports latch is at least partly in the research vessel's loop.",
       "type": "yesno",
-      "default", "no"
+      "default": "no"
     }],
     "score": [function (M15_1, M15_2) {
       M15_1 = Number(M15_1);
@@ -602,7 +600,7 @@
     "description": "N/A",
     "options": [{
       "id": "PT",
-      "title": "Number of precision tokens remaining.".
+      "title": "Number of precision tokens remaining.",
       "options": [
         {
           "title": "0",
@@ -637,7 +635,8 @@
       "default": "6"
     }],
     "score": [function(PT) {
-      PT = Number(PT) {
+      PT = Number(PT)
+      switch (PT) {
         case 0:
           return 0;
         case 1:
@@ -660,7 +659,7 @@
     "description": "N/A",
     "options": [{
       "id": "GP",
-      "title": "Gracious Professionalism displayed at the robot game table.".
+      "title": "Gracious Professionalism displayed at the robot game table.",
       "options": [
       {
         "title": "DEVELOPING 2",
@@ -675,13 +674,13 @@
         "value": "4"
       }],
       "type": "enum",
-      "default": "3",
+      "default": "3"
     }],
     "score": [function(GP) {
         return 0;
     }]
-  }
-  }],
+  },
+  ],
   "strings": {
     "yes": "Yes",
     "no": "No",
