@@ -483,7 +483,7 @@
         switch (M14_4) {
           case 0:
             return 25;
-          case 1;
+          case 1:
             return 45;
           case 2:
             return 55;
