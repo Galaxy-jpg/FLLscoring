@@ -10,7 +10,7 @@ config:
       - name: year
         display: Challenge
         type: values
-      default: 2024 SUBMERGED
+        default: 2024 SUBMERGED
         values:
           - 2024 SUBMERGED
           - 2023 MASTERPIECE
