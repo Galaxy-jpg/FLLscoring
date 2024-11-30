@@ -423,12 +423,12 @@
       "type": "yesno",
       "default": "no"
     }],
-    "score": [function(M12_1) {
-      M12_1 = String(M12_1);
-      if (M12_1 === 'yes') {
+    "score": [function(M13_1) {
+      M13_1 = String(M13_1);
+      if (M13_1 === 'yes') {
         return 20;
       }
-      if (M12_1 === 'no') {
+      if (M13_1 === 'no') {
         return 0;
       }
     }]
