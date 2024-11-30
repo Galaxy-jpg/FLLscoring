@@ -542,9 +542,9 @@
     }]
   },
   {
-    "id": "M15 RESEARCH VESSEL",
+    "title": "M15 RESEARCH VESSEL",
     "description": "N/A",
-    "options": [{
+    "objectives": [{
       "id": "M15_1",
       "title": "Number of samples, trident part(s), or treasure chest at least partly in the research vessel's cargo area.",
       "options": [{
@@ -596,9 +596,9 @@
     }]
   },
   {
-    "id": "PRECISION TOKENS",
+    "title": "PRECISION TOKENS",
     "description": "N/A",
-    "options": [{
+    "objectives": [{
       "id": "PT",
       "title": "Number of precision tokens remaining.",
       "options": [
@@ -655,9 +655,9 @@
     }]
   },
   {
-    "id": "GRACIOUS PROFESSIONALISM",
+    "title": "GRACIOUS PROFESSIONALISM",
     "description": "N/A",
-    "options": [{
+    "objectives": [{
       "id": "GP",
       "title": "Gracious Professionalism displayed at the robot game table.",
       "options": [
