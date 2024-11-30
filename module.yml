@@ -10,8 +10,9 @@ config:
       - name: year
         display: Challenge
         type: values
-        default: 2023 MASTERPIECE
+        default: 2024 SUBMERGED
         values:
+          - 2024 SUBMERGED
           - 2023 MASTERPIECE
           - 2021 CARGO CONNECT
           - 2020 RePLAY
